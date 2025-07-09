@@ -9,6 +9,8 @@ import rehypeHighlight from "rehype-highlight"
 import "highlight.js/styles/github-dark.css"
 import axios from "axios"
 import "./App.css"
+import "prismjs/components/prism-javascript"
+
 
 function App() {
   const [code, setCode] = useState(`function sum(a, b) {
@@ -59,7 +61,7 @@ console.log(result);`)
     setError("")
 
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", {
+      const response = await axios.post(`${import.meta.env.BACKEND_URL}`, {
         code,
         language,
       })
