@@ -61,7 +61,7 @@ console.log(result);`)
     setError("")
 
     try {
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}/ai/get-review`, {
+      const response = await axios.post(`https://online-code-reviewer-backend.vercel.app/ai/get-review`, {
         code,
         language,
       })
