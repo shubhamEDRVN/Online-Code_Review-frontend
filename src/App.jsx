@@ -61,7 +61,7 @@ console.log(result);`)
     setError("")
 
     try {
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}`, {
+      const response = await axios.post(`${import.meta.env.BACKEND_URL}/ai/get-review`, {
         code,
         language,
       })
